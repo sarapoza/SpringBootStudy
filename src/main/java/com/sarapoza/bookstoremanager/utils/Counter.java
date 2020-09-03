@@ -4,28 +4,24 @@ import java.io.Serializable;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-
-public class Counter implements Serializable{
+public class Counter implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
-	private int id;
+
+	private long id;
 	private int number;
-	
-	public Counter()  {
+
+	@Autowired
+	public Counter() {
 	}
 
 	@Autowired
-	public Counter(int id, int number) {
+	public Counter(long id, int number) {
 		this.id = id;
 		this.number = number;
 	}
 
-	public int getId() {
+	public long getId() {
 		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	public int getNumber() {
@@ -36,5 +32,12 @@ public class Counter implements Serializable{
 		this.number = number;
 	}
 
+	public int[] inputNumber() {
+		int [] recebeNum = new int[10];
+		for (int i = 0; i < 10; i++) {
+			recebeNum[i] = number;
+		}
+		return recebeNum;
+		
+	}
 }
-
