@@ -1,20 +1,18 @@
 package com.sarapoza.bookstoremanager.utils;
 
 import java.io.Serializable;
+import org.springframework.stereotype.Service;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
+@Service
 public class Counter implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	private long id;
 	private int number;
 
-	@Autowired
 	public Counter() {
 	}
 
-	@Autowired
 	public Counter(long id, int number) {
 		this.id = id;
 		this.number = number;
@@ -32,10 +30,10 @@ public class Counter implements Serializable {
 		this.number = number;
 	}
 
-	public int[] inputNumber() {
+	public int[] inputNumber(int num) {
 		int [] recebeNum = new int[10];
 		for (int i = 0; i < 10; i++) {
-			recebeNum[i] = number;
+			recebeNum[i] = num;
 		}
 		return recebeNum;
 		
