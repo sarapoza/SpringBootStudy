@@ -3,7 +3,7 @@ package com.sarapoza.bookstoremanager.utils;
 import java.io.Serializable;
 import org.springframework.stereotype.Service;
 
-@Service
+@Service("Counter")
 public class Counter implements Serializable {
 	private static final long serialVersionUID = 1L;
 
@@ -31,7 +31,7 @@ public class Counter implements Serializable {
 	}
 
 	public int[] inputNumber(int num) {
-		int [] recebeNum = new int[10];
+		int [] recebeNum = new int[num];
 		for (int i = 0; i < 10; i++) {
 			recebeNum[i] = num;
 		}
